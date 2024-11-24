@@ -1,0 +1,10 @@
+Notas:
+Substitua as Credenciais: Certifique-se de substituir seu.email@gmail.com e sua_senha com suas credenciais reais do Gmail.
+
+Permissões do Gmail: Você pode precisar permitir o acesso de aplicativos menos seguros nas configurações da sua conta do Gmail para que o envio de e-mails funcione.
+
+Monitoramento Contínuo: O código, como está, executa a verificação uma única vez. Para monitoramento contínuo, você pode colocar a chamada a monitorar_espaco_disco() dentro de um loop infinito e adicionar um delay usando time.sleep().
+
+Outros Servidores SMTP: Se você não quiser usar o Gmail, você pode configurar o código para usar outro servidor SMTP, ajustando as configurações de smtp_server, smtp_port, e as credenciais de login.
+
+Ao implementar esse código, você terá uma verificação básica do uso do espaço em disco e receberá notificações por e-mail quando os limites forem ultrapassados.

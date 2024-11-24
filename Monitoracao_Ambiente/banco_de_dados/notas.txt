@@ -1,0 +1,21 @@
+Notas:
+Formato do Arquivo de Credenciais: Certifique-se de que o arquivo credenciais.txt esteja no formato correto. Cada linha deve conter dsn, usuario e senha, separados por vírgula.
+
+Estrutura do Arquivo de Credenciais
+Primeiro, você deve criar um arquivo de texto chamado credenciais.txt que contém as informações de conexão no seguinte formato:
+
+
+dsn1,usuario1,senha1
+dsn2,usuario2,senha2
+dsn3,usuario3,senha3
+
+
+Conexão com Várias Bases: O script lê as credenciais de várias bases de dados e tenta se conectar a todas elas.
+
+Loop de Monitoramento: O script tem um loop que verifica o status das conexões a cada 10 segundos. Você pode ajustar esse intervalo conforme necessário.
+
+Tratamento de Erros: A implementação inclui tratamento de erros para gerenciar falhas de conexão e consultas.
+
+Fechamento de Conexões: O script não fecha as conexões no exemplo. Para um uso mais eficiente, considere adicionar lógica para fechar as conexões quando não forem mais necessárias.
+
+Ao executar este script, você monitorará o status das conexões com várias bases de dados Oracle conforme definido nas credenciais sem expor as senhas diretamente no código.

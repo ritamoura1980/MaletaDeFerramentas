@@ -1,0 +1,7 @@
+Pré-requisitos:
+Certifique-se de que a biblioteca psutil esteja instalada. Você pode instalá-la usando o pip:
+
+
+pip install psutil
+
+Para enviar e-mails, você precisará de um servidor SMTP. O exemplo abaixo usa o Gmail, então você precisará de uma conta do Gmail e permitir "Aplicativos menos seguros" ou usar OAuth2.
