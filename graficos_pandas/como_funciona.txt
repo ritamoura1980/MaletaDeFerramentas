@@ -1,0 +1,26 @@
+Como Funciona
+Leitura do Arquivo Excel: O arquivo problemas.xlsx é lido usando pd.read_excel. Certifique-se de que openpyxl está instalado, pois ele é necessário para ler arquivos do Excel.
+
+Agrupamento dos Dados: Os dados são agrupados pela coluna Ofensor, e as quantidades de problemas são somadas usando groupby e sum.
+
+Geração do Gráfico: 
+
+O gráfico é gerado utilizando matplotlib, onde um gráfico de barras é criado mostrando o número total de problemas por ofensor.
+O gráfico é rotulado adequadamente com títulos e eixos.
+Execução do Script: O script pode ser executado diretamente, e o gráfico será exibido com os dados correspondentes.
+
+Executando o Script
+Crie o Arquivo Excel:
+
+Salve os dados na estrutura mencionada anteriormente em um arquivo chamado problemas.xlsx.
+Execute o Script:
+
+Salve o código em um arquivo Python, por exemplo, grafico_ofensores.py, e execute:
+
+python grafico_ofensores.py
+
+
+Considerações Finais:
+Certifique-se de que o formato do Excel corresponde ao esperado pelo script. Se as colunas tiverem nomes diferentes, você precisará ajustar o código para refletir isso.
+Você pode personalizar o gráfico (cores, estilo, etc.) conforme necessário para atender às suas preferências.
+Este é um exemplo básico; você pode expandir a lógica para incluir mais análises conforme desejado.

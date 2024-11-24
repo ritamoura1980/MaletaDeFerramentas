@@ -1,0 +1,6 @@
+Ofensor;	Problema;	Quantidade
+Ofensor A;	Problema 1;	5
+Ofensor B;	Problema 2;	3
+Ofensor A;	Problema 3;	2
+Ofensor C;	Problema 1;	4
+Ofensor B;	Problema 1;	1
