@@ -1,0 +1,5 @@
+Pré-requisitos
+Certifique-se de que todas as bibliotecas necessárias estão instaladas:
+
+
+pip install cx_Oracle pandas matplotlib

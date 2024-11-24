@@ -1,0 +1,29 @@
+Como Funciona
+Conectar ao Banco de Dados: 
+
+A função conectar_banco utiliza cx_Oracle.connect() para estabelecer a conexão com o banco de dados Oracle usando as credenciais fornecidas.
+Buscar Clientes por Estado:
+
+A função buscar_clientes_por_estado executa uma consulta SQL para agrupar os clientes pelo estado e contar quantos estão em cada um, ordenando do maior para o menor. O SQL usa FETCH FIRST 10 ROWS ONLY para pegar apenas os 10 estados com mais clientes.
+Gerar Gráfico:
+
+A função gerar_grafico utiliza matplotlib para criar um gráfico de barras mostrando a quantidade de clientes por estado.
+Função Main:
+
+Na função main, você define suas credenciais e chama as funções necessárias para conectar ao banco, buscar os dados e gerar o gráfico.
+Executando o Código
+Configurar Credenciais: 
+
+Substitua seu_usuario, sua_senha e seu_dsn com as informações do seu banco de dados Oracle.
+Executar o Script:
+
+Salve o código em um arquivo Python (por exemplo, grafico_clientes.py) e execute-o:
+
+python grafico_clientes.py
+
+
+Considerações Finais:
+Pandas: O pandas facilita a manipulação dos dados e a criação do DataFrame baseado na consulta SQL.
+Matplotlib: O matplotlib fornece um framework fácil de usar para gerar gráficos em Python.
+Ajustes SQL: O código SQL pode ser ajustado de acordo com a estrutura real da sua tabela clientes.
+Este script é um exemplo básico e pode ser expandido para incluir opções avançadas de análise e visualização.
