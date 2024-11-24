@@ -1,0 +1,26 @@
+Como Usar
+Crie o arquivo clientes.json com os dados que você deseja.
+
+Execute o script. Você pode fazer isso usando o seguinte comando no terminal:
+
+
+python nome_do_seu_script.py
+(Substitua nome_do_seu_script.py pelo nome que você deu ao arquivo que contém o código.)
+
+Realize a busca REST. A API estará disponível no endereço http://127.0.0.1:8000.
+
+Para buscar todos os clientes, você pode acessar:
+
+
+http://127.0.0.1:8000/clientes
+Para buscar por nome, você pode passar o parâmetro nome na query string. Por exemplo:
+
+
+http://127.0.0.1:8000/clientes?nome=Ana
+
+Considerações:
+O modelo Cliente é criado usando pydantic para validar os dados de entrada.
+O endpoint /clientes retorna todos os clientes ou filtra com base no nome, se o parâmetro for fornecido.
+O código inclui tratamento de erro para retornar um status 404 caso nenhum cliente seja encontrado com o nome fornecido.
+O FastAPI também gera automaticamente a documentação interativa da API em http://127.0.0.1:8000/docs.
+Esse é um exemplo básico e pode ser expandido com mais funcionalidades, como adicionar, editar ou deletar 

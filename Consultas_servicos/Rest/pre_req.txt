@@ -1,0 +1,5 @@
+Pré-requisitos
+Primeiro, certifique-se de ter o FastAPI e um servidor ASGI como o uvicorn instalados. Você pode instalá-los usando o pip:
+
+
+pip install fastapi uvicorn

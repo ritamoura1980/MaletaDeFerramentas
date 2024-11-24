@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "nome": "Ana Silva",
+        "idade": 30,
+        "sexo": "Feminino",
+        "email": "ana@example.com"
+    },
+    {
+        "id": 2,
+        "nome": "Carlos Almeida",
+        "idade": 25,
+        "sexo": "Masculino",
+        "email": "carlos@example.com"
+    }
+]

@@ -1,0 +1,31 @@
+Como Funciona
+Requisições HTTP:
+
+A função consultar_cliente usa requests.get para fazer a chamada GET, passando o CPF como um parâmetro de consulta.
+Tratamento de Erros:
+
+O código inclui exemplos de tratamento de erros comuns que podem ocorrer durante a requisição, como erros de resposta HTTP, erros de conexão, timeouts e outras exceções.
+Processamento da Resposta:
+
+A função tenta analisar a resposta como JSON e retorná-la. Se a resposta não for um JSON válido, um erro será capturado.
+Função main:
+
+Define a URL do serviço e o CPF que você deseja consultar.
+Chama a função de consulta e imprime a resposta.
+Executando o Script
+Substituição de Variáveis:
+
+Troque 'http://endereco?wsdl' pela URL real do seu serviço.
+Troque o cpf pelo CPF que deseja consultar.
+Executar o Script:
+
+Salve o script em um arquivo Python (por exemplo, consulta_cliente.py) e execute-o usando:
+
+
+
+python consulta_cliente.py
+
+Considerações
+Tipo de Serviço: O exemplo acima considera que você está realizando uma requisição RESTful. Se o seu serviço for SOAP, o método correto de interação geralmente envolve o uso de bibliotecas específicas como zeep.
+Formato da Resposta: Certifique-se de que o serviço realmente retorna JSON, caso contrário, você precisará ajustar o processamento da resposta.
+Documentação do Serviço: Consulte a documentação do serviço para entender os parâmetros de entrada e os formatos de resposta esperados.
