@@ -1,0 +1,46 @@
+Pré-Requisito
+Instalar o MongoDB Community
+Instalar o Mongosh
+
+Comandos MONGODB:
+
+1 - Executar mongosh na linha de comando
+Comando: mongosh
+
+2 - Criar Banco de Dados
+Comando: use BD_Cadastro
+
+3 - Mostrar Bancos Existentes
+Comando: show databases
+
+4 - Criar Coleções ("Tabelas") 
+Comando: db.createCollection("tb_clientes")
+
+5 - Apagar Coleção:
+Comando: db.tb_clientes.drop()
+
+6 - Apagar Banco de Dados:
+	6.1 - Conectar na base:
+	Comando: use BD_Cadastro
+	6.2 - Apagar a base:
+	Comando: db.dropDatabase()
+
+7 - Inserir Dados (um único registro)  :
+db.tb_clientes.insertOne({
+   "Nome": "Maria",
+   "Idade": 30,
+    "Filhos": 2
+})
+
+8 - Inserir Dados ( multiplos registros ):
+db.tb_clientes.insertMany([{ "Nome ": "Jose",
+        "Idade": 45,
+        "Filhos": 0
+    },{
+        "Nome ": "Tiago",
+        "Idade": 55,
+        "Filhos": 3
+}])
+
+
+

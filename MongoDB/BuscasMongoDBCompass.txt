@@ -1,0 +1,110 @@
+Chegou o momento de realizarmos buscas utilizando o MongoDB Compass, para isso, temos o botão FIND que possui diversas opções que podemos utilizar para buscar os nossos documentos:
+
+
+
+FILTER: utilizado para especificar qual será a condição que os documentos devem atender para serem retornados na busca.
+
+PROJECT: utilizado para especificar quais campos serão ou não retornados na consulta.
+
+Ao Informar o nome do campo e informar 0, todos os campos, exceto os campos especificados no campo project, são retornados. Se o campo receber o valor de 1, ele será retornado na consulta. O campo _id é retornado por padrão, a menos que este seja especificado no campo project e definido como 0.
+SORT: especifica a ordem de classificação dos documentos retornados.
+
+Para especificar a ordem crescente de um campo, defina o campo como 1.
+Para especificar a ordem decrescente de um campo, defina o campo como -1.
+MAX TIME MS: define o limite de tempo cumulativo em milissegundos para processar as operações da barra de consulta. Se o limite de tempo for atingido antes da conclusão da operação, o Compass interrompe a operação.
+
+COLLATION: utilizado para especificar regras específicas do idioma para comparação de textos, como regras para letras maiúsculas ou minúsculas, acentos, entre outros.
+
+SKIP: especifica quantos documentos devem ser ignorados antes de retornar o conjunto de resultados.
+
+LIMIT: especifica o número máximo de documentos a serem retornados.
+
+
+REALIZAR BUSCAS
+1 - Retorna todos os registros da collection series 
+db.series.find()
+
+2 - Busca Apenas registros onde o "Ano de lançamento" = 2018
+db.series.find({"Ano de lançamento": 2018})
+
+
+3 - Busca Apenas "Ano de lançamento": 2018 OU "Classificação": "18+"
+db["series"].find({$or: [{"Ano de lançamento": 2018}, {"Classificação": "18+"}]})
+
+ou 
+
+db["series"].find({"Ano de lançamento": {$in: [2019, 2020]}})
+
+
+
+4 - Busca Apenas "Ano de lançamento": 2018 E "Classificação": "18+"
+db["series"].find({$and: [{"Ano de lançamento": 2018}, {"Classificação": "18+"}]})
+
+
+5 - Busca apenas "Ano de lançamento"
+db["series"].find({"Ano de lançamento": {$in: [2019, 2020]}})
+
+
+6 - Busca apenas "Temporadas disponíveis" MAIOR QUE 15
+db["series"].find({"Temporadas disponíveis": {$gt: 15}})
+
+
+7 - Busca apenas "Temporadas disponíveis" MAIOR OU IGUAL 15
+db.series.find({"Temporadas disponíveis": {$gt: 15}})
+
+
+8 - Busca apenas "Temporadas disponíveis" MENOR QUE 2
+db.series.find({"Temporadas disponíveis": {$lt: 2}})
+
+
+9 - Busca apenas "Temporadas disponíveis" MENOR OU IGUAL 2
+db.series.find({"Temporadas disponíveis": {$lte: 2}})
+
+
+10 - Retorna apenas os campos Série e Ano de Lançamento
+db.series.find({},{"Série":1, "Ano de lançamento": 1, "_id":0})
+
+
+11 - Retorna apenas 5 registros
+db.series.find().limit(5)
+
+
+12 - Busca apenas "Série" igual a Pataal Lok "Temporadas disponíveis" MAIOR OU IGUAL 1
+ db.series.find({"Série": "Pataal Lok","Temporadas disponíveis": { $gte: 1 }})
+
+
+13 - Retorna apenas os Ano de Lançamento DIFERENTE de 2020
+db.series.find({"Ano de lançamento": {$ne: 2020}})
+
+
+14 - Retorna a consulta ordenada pelo campo Série
+db.series.find().sort({"Série":1})
+
+
+15 - Retorna todos os registros de um array onde o valor for Ação ou Comédia.
+db.series.find({"Genero": {$all:["Ação", "Comédia"]}})
+
+
+
+
+REALIZAR ATUALIZAÇÕES:
+
+1 - Para atualizar um unico registro
+db.series.updateOne({"Série": "Grimm"},{$set: {"Temporadas disponíveis": 6}})
+
+2 - Para atualizar mais de um registro
+db.series.updateMany({"Série":{$in:["Four More Shots Please", "Fleabag"]}},{$set: {"Classificação": "18+"}})
+
+3 - Atualiza o campo IMDb Avaliação para 8.1 quando a Série for igual "Grey's Anatomy"
+db.series.updateOne({"Série": "Grey's Anatomy"},{$set: {"IMDb Avaliação": 8.1}})
+
+
+
+REALIZAR REMOÇÃO:
+
+1 - Remover um unico registro quando a Série for igual a The Boys
+db.series.deleteOne({"Série": "The Boys"})
+
+2 - Remover mais de um registro quando a Temporadas disponíveis for igual a 1
+db.series.deleteMany({"Temporadas disponíveis": 1})
+
