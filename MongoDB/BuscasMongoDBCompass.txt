@@ -1,4 +1,4 @@
-Chegou o momento de realizarmos buscas utilizando o MongoDB Compass, para isso, temos o botão FIND que possui diversas opções que podemos utilizar para buscar os nossos documentos:
+Para realizarmos buscas utilizando o MongoDB Compass, temos o botão FIND que possui diversas opções que podemos utilizar para buscar os nossos documentos:
 
 
 
